@@ -1,0 +1,28 @@
+1.) docker run hello-world
+2.) docker image ls
+3.) docker container ls
+4.) docker container ls --all
+
+
+How to create docker images:
+
+1. create a file Dockerfile
+2. Fill it with all the necessary stuff using FROM, COPY, RUN, CMD commands etc
+3. create other files requirements.txt and say an e.g. app.py
+4. Dockerfile contains commands to install all the requirements given in requirements.txt
+5. Write all the necessary things in app.py
+6. docker build --tag=<name>   
+7. docker image ls
+8. docker run <params>
+9. docker container ls
+
+
+How to Publish the image:
+1. docker login
+2. docker tag image username/repository:tag
+   (e.g. docker tag friendlyhello yksel4docker/getstarted:v0)
+3. docker push username/repository:tag
+   (e.g. docker push yksel4docker/getstarted:v0)
+4. docker run username/repository:tag
+   (e.g. docker run -p 4000:80 yksel4docker/getstarted:v0)
+
